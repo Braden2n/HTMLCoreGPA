@@ -1,3 +1,5 @@
+<!-- Braden Toone, Hailey Sanders, Thomas Cassler, Jackson Newell, Elise Gordon, Emma Bastian -->
+<!-- This program calculates and displays Core GPA in HTML -->
 <html lang="en"><head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -26,11 +28,99 @@
 </head>
 <body>
     <form>
-        <!--insert html tags --> 
-
-        <button type="button" onclick="calcGPA()">Calculate GPA</button>
-
-        <!--insert html tag for displaying the calcualted GPA --> 
+        <fieldset style="width:250px">
+            <!--GPA inputs-->
+            <legend style="float:center">GPAs</legend>
+            <form>
+                <!--Gets number input for overall GPA-->
+                <label for="overallGPA">What is your overall GPA?</label>
+                <br>
+                <input type="number" id="overallGPA" name="overallGPA">
+                <br>
+            </form>
+            <form>
+                <!--Gets number input for the GPA of the last 30 credits-->
+                <label for="last30GPA">What is the GPA of your last 30 credits?</label>
+                <br>
+                <input type="number" id="last30GPA" name="last30GPA">
+            </form>
+        </fieldset>
+        <br>
+        <!-- Letter Grade Fields -->
+        <fieldset style="width:250px">
+            <legend style="float:center">Letter Grades</legend>
+            <!--Drop down menu to choose input for IS 201 grade-->
+            <label for="is201Grade">What is your IS 201 Grade?</label>
+            <select name="is201Grade" id="is201Grade">
+                <option value="4.00">A</option>
+                <option value="3.67">A-</option>
+                <option value="3.33">B+</option>
+                <option value="3.00">B</option>
+                <option value="2.67">B-</option>
+                <option value="2.33">C+</option>
+                <option value="2.00">C</option>
+                <option value="1.67">C-</option>
+                <option value="1.33">D+</option>
+                <option value="1.00">D</option>
+                <option value="0.67">D-</option>
+                <option value="0.33">F</option>
+            </select>
+            <br>
+            <br>
+            <!--Accounting 200 grade code-->
+            <label for="acc200Grade">What is your ACC 200 Grade?</label>
+            <select name="acc200Grade" id="acc200Grade">
+                <option value="4.00">A</option>
+                <option value="3.67">A-</option>
+                <option value="3.33">B+</option>
+                <option value="3.00">B</option>
+                <option value="2.67">B-</option>
+                <option value="2.33">C+</option>
+                <option value="2.00">C</option>
+                <option value="1.67">C-</option>
+                <option value="1.33">D+</option>
+                <option value="1.00">D</option>
+                <option value="0.67">D-</option>
+                <option value="0.33">F</option>
+            </select>
+            <br>
+            <br>
+            <!--IS 303 grade code -->
+            <label for="is303Grade">What is your IS 303 Grade?</label>
+            <select name="is303Grade" id="is303Grade">
+                <option value="4.00">A</option>
+                <option value="3.67">A-</option>
+                <option value="3.33">B+</option>
+                <option value="3.00">B</option>
+                <option value="2.67">B-</option>
+                <option value="2.33">C+</option>
+                <option value="2.00">C</option>
+                <option value="1.67">C-</option>
+                <option value="1.33">D+</option>
+                <option value="1.00">D</option>
+                <option value="0.67">D-</option>
+                <option value="0.33">F</option>
+            </select>
+        </fieldset>
+        <br>
+        <br>
+        <!-- Essay Score Field -->
+        <fieldset style="width:250px">
+            <legend>Essay Score</legend> 
+            <label for="essay">What is your essay score?</label>
+            <select name="essay" id="essay">
+                <option value="4">4</option>
+                <option value="3">3</option>
+                <option value="2">2</option>
+                <option value="1">1</option>
+                <option value="0">0</option>
+            </select>
+        </fieldset>
+        <br>
+        <br>
+        <!-- Button that submits and displays Core GPA -->
+        <button type="submit" onclick="calcGPA()">Calculate GPA</button>
+        <p id="coreGPA" name="coreGPA">Core GPA is</p>
     </form>
-
-</body></html>
+</body>
+</html>
